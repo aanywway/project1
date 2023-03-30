@@ -1,0 +1,59 @@
+ul li.purple {
+    color:purple;
+}
+ul li.blue {
+    color:blue;
+}
+ul li.springgreen {
+    color:springgreen;
+}
+ul li.brown {
+    color:brown;
+}
+ul li.salmon {
+    color:salmon;
+}
+ol {
+    list-style-type: upper-roman; /*меняет арабскую нумерацию на армянскую*/
+    color:wheat
+}
+ul {
+    list-style-type: circle; /*меняет тёмные кружочки на пустые кружочки*/
+}
+.padding {
+    background-color: aqua;
+    padding: 10px; /*внутренний отступ*/
+}
+.margin {
+    background-color: blueviolet;
+    margin: 10px; /*внешний отступ*/
+}
+ul li.wheat {
+    color:wheat;
+}
+ol.element {list-style-type: none;
+counter-reset: number;}
+ol.element li::before {
+content: counter(number) ')';
+counter-increment: number;}
+blockquote::before {
+    content: "«";
+}
+blockquote:after {
+    content: "»";
+}
+ul.element2 { list-style-type: none;
+font-style: italic; }
+ul.element2 li::before {
+    content: '-';
+    color: #04b548;
+}
+ul.element2 li::after {
+    content: '-';
+    color: #04b548;
+}
+img {
+border: 2px coral dotted;
+border: 1px dotted coral;
+border-radius: 100px;
+}
