@@ -1,0 +1,9 @@
+.skyblue {
+    background-color:skyblue;
+}
+li.skyblue:after {
+    content: '\274C';
+}
+li.skyblue::before {
+    content: '&#9633;'
+}

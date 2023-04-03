@@ -1,0 +1,19 @@
+body {
+    background-color: rgba(207, 206, 206, 0.7);
+}
+ol {
+    color: white;
+    background-color: pink;
+    list-style-position: inside;
+}
+.pink {
+    background-color:rgb(214, 145, 157);
+}
+.palevioletred {
+    background-color:rgba(156, 47, 83, 0.8);
+}
+li, .palevioletred {
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 5px;
+}
+

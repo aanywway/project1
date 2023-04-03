@@ -1,0 +1,13 @@
+table { /*внешние границы всей таблицы*/
+    border: 2px solid purple; 
+}
+th {
+    border: 2px solid powderblue;
+}
+caption {
+    text-align: left;
+    caption-side: bottom;
+}
+th:nth-child(2n+1){
+    color:purple;
+}

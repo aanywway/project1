@@ -1,0 +1,19 @@
+table { /*внешние границы всей таблицы*/
+    border: 1px solid black; 
+    border-collapse: separate;
+    border: 3px solid plum;
+    border-radius: 10px;
+    
+}
+th { /*границы ячеек заголовков таблицы*/
+    border: 1px solid red;
+}
+td { /*границы ячеек основной части*/
+    border: 1px solid blue;
+}
+#uniq {
+    width: 30px;
+    height: 20px;
+    text-align: right;
+    background-color: skyblue;
+}
