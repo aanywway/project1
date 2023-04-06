@@ -11,3 +11,19 @@ caption {
 th:nth-child(2n+1){
     color:purple;
 }
+a {color:royalblue} /*меняет цвет ссылки*/
+a:link {color: seagreen;}
+a:visited {
+    color:red;
+}
+a:focus {
+    border-bottom: 1px solid; background: sienna;
+}
+a:hover {
+    border-bottom: 1px solid; background: steelblue;
+}
+a:active {
+    background: thistle; color:tomato;
+}
+
+

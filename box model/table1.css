@@ -1,0 +1,32 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    border: 1px solid black;
+}
+td {
+    border: 1px solid black;
+}
+.one {
+    background-color: rgb(255, 240, 163);
+}
+.two {
+    background-color: rgb(210, 210, 255);
+}
+.three {
+    background-color: rgb(255, 195, 195);
+}
+.four {
+    background-color: rgb(179, 255, 210);
+}
+.five {
+    background-color: rgb(255, 195, 255);
+}
+.one, .two, .three, .four, .five {
+    text-align: center;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
