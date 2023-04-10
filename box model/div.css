@@ -1,0 +1,23 @@
+.block {
+    display: inline-block;
+    width: 21%;
+    height: 150px;
+    line-height: 170%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2%;
+    border: 2px solid;
+}
+.block:first-of-type {
+    background-color: rgb(210, 210, 255);
+}
+.block:nth-of-type(2) {
+    background-color: rgb(255, 195, 195);
+}
+.block:nth-of-type(3) {
+    background-color: rgb(255, 240, 163);
+}
+.block:last-of-type {
+    background-color: rgb(179, 255, 210);
+}
