@@ -1,0 +1,15 @@
+.div1 {
+    width: 200px;
+    height: 2000px;
+    border: 1px solid black;
+    background: #e3b5a4;
+}
+.div2 {
+    width: 600px;
+    height: 200px;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    border: 1px solid black;
+    background: #f5e9e2;
+}
