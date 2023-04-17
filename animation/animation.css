@@ -1,0 +1,13 @@
+a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    background-color: #003fa3;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 15px 25px;
+    transition: all 0.8s ease 0s;
+}
+a:hover {
+    background-color: #012763;
+}
