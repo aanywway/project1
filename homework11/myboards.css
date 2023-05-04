@@ -36,7 +36,7 @@ section {
 h4 {
     margin: 20px 0px 20px 20px;
 }
-div {
+.d1 {
     height: 150px;
     width: 350px;
     background-color: white;
@@ -53,9 +53,14 @@ p {
 figcaption {
     float: right;
 }
-.img, .img1 {
+.img{
     display: flex;
     height: 50px;
+    justify-content: space-evenly;
+    width: 100px;
+}
+.img .d {
+    width: 100px;
 }
 /*.d1, .d2, .d3, .d4 {
     margin-top: 25px;
