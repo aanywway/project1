@@ -1,0 +1,77 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body {
+    margin: 0 auto;
+    background-color: #003f3f;
+}
+main {
+    margin-left: 125px;
+    margin-top: 125px;
+}
+header p {
+    color: gray;
+    font-size: 20px;
+}
+.zagolovok {
+    width: 700px;
+    line-height: 80px;
+}
+h1 {
+    font-size: 60px;
+}
+.text p {
+    display: inline-block;
+    margin-left: 40px;
+    line-height: 25px;
+}
+.colortext {
+    color: gray;
+}
+.content {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+@media screen and (max-width: 600px) {
+    main {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    h1 {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 35px;
+    }
+    .zagolovok {
+        width: 400px;
+        line-height: 50px;
+    }
+    .text p {
+        margin-left: 50px;
+        width: 120px;
+    }
+    .text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /*justify-content: space-evenly;*/
+        position: absolute;
+        /*top: 30%;*/
+        left: 120px;
+    }
+    .num4 {
+        order: 1;
+    }
+    .num1 {
+        order: 2;
+    }
+    .num2 {
+        order: 3;
+     } 
+    .num3 {
+        order: 4;
+    }
+}
