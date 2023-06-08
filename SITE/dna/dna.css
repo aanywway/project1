@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* проверить что это такое */
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: #9a9e9f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.dna-main {
+    position: relative; /*чекнуть что это*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d; /*чекнуть*/
+    transform: rotateZ(-20deg);
+}
+@keyframes rotate {
+    0% {
+        transform: rotatex(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+.dna {
+    position: relative;
+    width: 1px;
+    height: 100px;
+    border: 1px solid black;
+    box-shadow: 0 0 15 #e7e7e7;
+    background: transparent;
+    margin: 0px 10px;
+    animation: rotate 3s linear infinite;
+}
+.dna::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    /* background: #1cffb3; */
+    border-radius: 50%;
+    /* box-shadow: 0 0 15px #1cffb3; */
+    background: red;
+    box-shadow: 0 0 15px red;
+}
+.dna::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    /* background: #0ff; */
+    border-radius: 50%;
+    /* box-shadow: 0 0 15px #0ff; */
+    background: red;
+    box-shadow: 0 0 15px red;
+}
+.dna:nth-child(1) {
+    animation-delay: -0.15s;
+}
+.dna:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.dna:nth-child(3) {
+    animation-delay: -0.45s;
+}
+.dna:nth-child(4) {
+    animation-delay: -0.6s;
+}
+.dna:nth-child(5) {
+    animation-delay: -0.75s;
+}
+.dna:nth-child(6) {
+    animation-delay: -0.9s;
+}
+.dna:nth-child(7) {
+    animation-delay: -1.05s;
+}
+.dna:nth-child(8) {
+    animation-delay: -1.2s;
+}
+.dna:nth-child(9) {
+    animation-delay: -1.35s;
+}
+.dna:nth-child(10) {
+    animation-delay: -1.5s;
+}
+.dna:nth-child(11) {
+    animation-delay: -1.65s;
+}
+.dna:nth-child(12) {
+    animation-delay: -1.8s;
+}
+.dna:nth-child(13) {
+    animation-delay: -1.95s;
+}
+.dna:nth-child(14) {
+    animation-delay: -2.1s;
+}
+.dna:nth-child(15) {
+    animation-delay: -2.25s;
+}
+.dna:nth-child(16) {
+    animation-delay: -2.4s;
+}
+.dna:nth-child(17) {
+    animation-delay: -2.55s;
+}
+.dna:nth-child(18) {
+    animation-delay: -2.6s;
+}
+
+
+
+
+
+ul {
+    position: absolute;
+    top: 62%;
+}
+.dna-wrapper li {
+    /* position: relative; */
+    display: none;
+    padding: 0;
+    height: 100px;
+    width: 396px;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-left: 4px solid #070707;
+    position: relative;
+    font-size: xx-large;
+}
+.dna-wrapper:hover li {
+    display: block;
+}
+.dna-wrapper li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding-top: 30px;
+    padding-left: 20px;
+    height: 100px;
+    line-height: 40px;
+    transition: all .5s;
+}
+.dna-wrapper a:hover {
+    background: white;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+}
