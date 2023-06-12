@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: lightten(#792879, 60%);
+  background-color: #f4dff4;
   color: #792879;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 18px;
@@ -15,7 +15,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   background-color: #792879;
-  color: lightten(#792879, 60%);
+  color: #f4dff4;
   padding: 1vh 4vw;
   position: sticky;
   left: 0;
@@ -81,7 +81,7 @@ header nav ul li a.active {
   border-bottom-width: 1px;
   border-left-width: 1px;
   background-color: #792879;
-  color: lightten(#792879, 60%);
+  color: #f4dff4;
   padding: 2vh 3vh;
   text-transform: uppercase;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -121,7 +121,7 @@ header nav ul li a.active {
 }
 .areas {
   background-color: #792879;
-  color: lightten(#792879, 60%);
+  color: #f4dff4;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -162,4 +162,133 @@ header nav ul li a.active {
   justify-content: space-around;
   margin: 0 4vw;
   padding-top: 5vw;
+}
+.prices h2 {
+  text-align: center;
+}
+.prices div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.prices div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid #792879;
+  border-radius: 20% 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  padding: 2vh;
+  margin: 0 1%;
+}
+.prices div div:hover {
+  background-color: #792879;
+  color: #f4dff4;
+}
+.prices div div:hover li {
+  border-bottom: 1px solid #f4dff4;
+}
+.prices div div:hover button {
+  background-color: #f4dff4;
+  color: #792879;
+}
+.prices div div h3 {
+  text-align: center;
+}
+.prices div div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.prices div div ul li {
+  text-align: center;
+  margin: 1vh;
+  padding-bottom: 1vh;
+  border-bottom: 1px solid #792879;
+}
+.prices div div button {
+  background: none;
+  background-color: #792879;
+  color: #f4dff4;
+  border: 2px solid #792879;
+  border-radius: 20% 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 4vw;
+  padding: 2vh 1vh;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.prices div div button:focus {
+  outline: transparent;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 4vw;
+  padding-top: 5vw;
+}
+.contact h2 {
+  text-align: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.contact form input,
+.contact form textarea {
+  background: none;
+  background-color: #f4dff4;
+  color: #792879;
+  border: 2px solid #792879;
+  border-radius: 20% 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  margin-top: 4vw;
+  padding: 3vh 1vh;
+  font-size: 1rem;
+}
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #792879;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: transparent;
+}
+.contact form input[type="submit"] {
+  background: none;
+  background-color: #792879;
+  color: #f4dff4;
+  border: 2px solid #792879;
+  border-radius: 20% 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 4vw;
+  padding: 2vh 1vh;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contact form input[type="submit"]:focus {
+  outline: transparent;
+}
+.footer {
+  background-color: #792879;
+  color: #f4dff4;
+  margin-top: 4vw;
+}
+.footer p,
+.footer footer {
+  padding: 1vh 4vw;
+  text-align: center;
 }

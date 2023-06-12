@@ -1,22 +1,17 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* проверить что это такое */
-    font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-    background: #9a9e9f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+	background: #24252A;
 }
 .dna-main {
-    position: relative; /*чекнуть что это*/
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform-style: preserve-3d; /*чекнуть*/
+    transform-style: preserve-3d;
     transform: rotateZ(-20deg);
 }
 @keyframes rotate {
@@ -31,37 +26,33 @@ body {
     position: relative;
     width: 1px;
     height: 100px;
-    border: 1px solid black;
+    border: 1px solid #e7e7e7;
     box-shadow: 0 0 15 #e7e7e7;
     background: transparent;
     margin: 0px 10px;
     animation: rotate 3s linear infinite;
 }
 .dna::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -5px;
-    width: 10px;
-    height: 10px;
-    /* background: #1cffb3; */
-    border-radius: 50%;
-    /* box-shadow: 0 0 15px #1cffb3; */
-    background: red;
-    box-shadow: 0 0 15px red;
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -5px;
+	width: 10px;
+	height: 10px;
+	background: #1cffb3;
+	border-radius: 50%;
+	box-shadow: 0 0 15px #1cffb3;
 }
 .dna::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -5px;
-    width: 10px;
-    height: 10px;
-    /* background: #0ff; */
-    border-radius: 50%;
-    /* box-shadow: 0 0 15px #0ff; */
-    background: red;
-    box-shadow: 0 0 15px red;
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: -5px;
+	width: 10px;
+	height: 10px;
+	background: #0ff;
+	border-radius: 50%;
+	box-shadow: 0 0 12px #0ff;
 }
 .dna:nth-child(1) {
     animation-delay: -0.15s;
@@ -117,17 +108,20 @@ body {
 .dna:nth-child(18) {
     animation-delay: -2.6s;
 }
-
-
-
-
-
-ul {
+.chapter1 {
+    text-align: center;
+    margin-bottom: 100px;
+}
+/* .dna-menu {
     position: absolute;
-    top: 62%;
+    top: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .dna-wrapper li {
-    /* position: relative; */
+    position: relative;
     display: none;
     padding: 0;
     height: 100px;
@@ -154,4 +148,69 @@ ul {
 .dna-wrapper a:hover {
     background: white;
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+}
+.dna-menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    display: none;
+}
+.first:hover p {
+    display: block;
+
+} */
+#biography {
+    height: 300px;
+}
+.container {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.container ul {
+    list-style: none;
+    background: #24252A;
+    width: 450px;
+}
+.container ul li {
+    /* display: inline-block; */
+    /* position: relative; */
+    border: 1px solid white;
+}
+.container ul li a {
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    display: grid;
+}
+.container ul li ul.dropdown li {
+    display: grid;
+}
+.container ul li ul.dropdown {
+    width: 450px;
+    background: #24252A;
+    backdrop-filter: blur(50px);
+    /* display: none; */
+}
+.container ul li a:hover {
+    background: #112c66;
+    backdrop-filter: blur(50px);
+}
+.container ul li:hover ul.dropdown {
+    display: grid;
+}
+h1 {
+    color: white;
+}
+.silka {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }

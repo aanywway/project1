@@ -1,0 +1,12 @@
+#contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+.images {
+    padding: 20px;
+}
+h3 {
+    color: white;
+}

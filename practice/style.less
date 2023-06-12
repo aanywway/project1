@@ -3,7 +3,7 @@
 // переменные для цвета
 @bgDark:#792879;
 @fontDark:#792879;
-@bgLight:lightten(@bgDark, 60%);
+@bgLight:lighten(@bgDark, 60%);
 @fontLight:#eee;
 // переменная для шрифта
 @font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -166,4 +166,110 @@ header {
     .flex(column, space-around);
     margin: 0 @indent;
     padding-top: @indent+@indentV;
+    h2 {
+        text-align: center;
+    }
+    div {
+        .flex(row, center);
+        div {
+            .flex(column, space-around);
+            .border(@bgDark, 20%);
+            padding: @indentV*2;
+            margin: 0 1%;
+            &:hover {
+                .colorDark();
+                li {
+                    border-bottom: 1px solid @bgLight;
+                }
+                button {
+                    .colorLight();
+                }
+            }
+            h3 {
+                text-align: center;
+            }
+            ul {
+                .reset();
+                li {
+                    text-align: center;
+                    margin: @indentV;
+                    padding-bottom: @indentV;
+                    border-bottom: 1px solid @bgDark;
+                }
+            }
+            button {
+                background: none;
+                .colorDark();
+                .border(@bgDark, 20%);
+                width: 60%;
+                margin: 0 auto;
+                margin-top: @indent;
+                padding: @indentV*2 @indentV;
+                text-transform: uppercase;
+                font-family: @font;
+                &:focus {
+                    outline: transparent;
+                }
+            }
+        }
+    }
+}
+.contact {
+    .flex(column, space-around);
+    margin: 0 @indent;
+    padding-top: @indent+@indentV;
+
+    h2 {
+        text-align: center;
+    }
+
+    form {
+        .flex(column, center);
+        width: 50%;
+        margin: 0 auto;
+
+        input,
+        textarea {
+            background: none;
+            .colorLight();
+            .border(@bgDark, 20%);
+            margin-top: @indent;
+            padding: @indentV*3 @indentV;
+            font-size: 1rem;
+
+            &::placeholder {
+                color: @fontDark;
+                font-family: @font;
+            }
+
+            &:focus {
+                outline: transparent;
+            }
+        }
+
+        input[type="submit"] {
+            background: none;
+            .colorDark();
+            .border(@bgDark, 20%);
+            width: 30%;
+            margin: 0 auto;
+            margin-top: @indent;
+            padding: @indentV*2 @indentV;
+            text-transform: uppercase;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            &:focus {
+                outline: transparent;
+            }
+        }
+    }
+}
+.footer {
+    .colorDark();
+    margin-top: @indent;
+    p,
+    footer {
+        padding: @indentV @indent;
+        text-align: center;
+    }
 }
