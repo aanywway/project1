@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Второй пример</title>
+</head>
+<body>
+    <script>
+        // var sum = 0;
+        // debugger;
+        // while (true){
+        //     var value = +prompt("Введите число", '');
+        //     if (!value)
+        //     break;
+        //     sum += value;
+        // }
+        // alert('Сумма:' + sum);
+        // while (true) {
+        // var value = prompt ('Введите число', '');
+        // if (value % value == 0){
+        //     alert('Является простым')
+        // }
+        // }
+        let n = +prompt("Введите число");
+        let isPrime = true; //булевская переменная, которая отвечает за критерий простоты числа
+        for(let i = 2; i < n; i++) {
+            if (n % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if(isPrime) {
+            console.log(n, "- Простое число");
+        }
+        else {
+            console.log(n, "- Составное число");
+        }
+    </script>
+</body>
+</html>
