@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>homework</title>
+</head>
+<body>
+    <div class="about">
+        <div class="about__body">
+            <div class="about__header">
+                <div class="about__title title">Облигации в России</div>
+                <div class="about__subtitle">
+                    <div class="about__text">Облигации федерального, субфедерального займа, еврооблигации и облигации самых известных компаний...</div>
+                    <a href="#" class="about__link">Показать весь <img src="skip-down.png" alt=""></a>
+                </div>
+            </div>
+            <input type="text" class="search-input" placeholder="Название или тикер">
+        </div>
+    </div>
+    <div class="content">
+        <div class="content__body">
+            <div class="content__title title">Все об инвестициях</div>
+            <div class="content__column">
+                <div class="content__column__item1">
+                    <div class="content__column__item__text">
+                        <div class="content__column__item__text__title">Акции</div>
+                        <div class="content__column__item__text__subtitle">Покупка акций российских и мировых компаний</div>
+                    </div>
+                    <button class="green-button">Купить</button>
+                </div>
+                <div class="content__column__item2">
+                    <div class="content__column__item__text">
+                        <div class="content__column__item__text__title">Облигации</div>
+                        <div class="content__column__item__text__subtitle">Инвестируйте в ценные бумаги и зарабатывайте на процентах</div>
+                    </div>
+                    <button class="green-button">Подобрать</button>
+                </div>
+                <div class="content__column__item3">
+                    <div class="content__column__item__text">
+                        <div class="content__column__item__text__title">Дивиденды</div>
+                        <div class="content__column__item__text__subtitle">Размеры дивидендов и даты выплат на календаре</div>
+                    </div>
+                    <button class="white-button">Подробнее</button>
+                </div>
+                <div class="content__column__item4">
+                    <div class="content__column__item__text">
+                        <div class="content__column__item__text__title">Индивидуальный инвестиционный счет</div>
+                        <div class="content__column__item__text__subtitle">Откройте счет и увеличивайте доходность своих инвестиций</div>
+                    </div>
+                    <button class="green-button">Открыть ИИС</button>
+                </div>
+                <div class="content__column__item5">
+                    <div class="content__column__item__text">
+                        <div class="content__column__item__text__title">Брокеры</div>
+                        <div class="content__column__item__text__subtitle">Инвестируйте вместе с профессионалами.</div>
+                    </div>
+                    <button class="white-button">Выбрать</button>
+                </div>
+                <div class="content__column__item6">
+                    <div class="content__column__item__text">
+                        <div class="content__column__item__text__title">Обучение</div>
+                        <div class="content__column__item__text__subtitle">Учитесь инвестировать БЕСПЛАТНО вместе с Банкирос</div>
+                    </div>
+                    <button class="white-button">Пройти обучение</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="invests">
+        <div class="diagram">
+            <div class="diagram__body">
+                <div class="diagram__header">
+                    <div class="diagram__title title">Акции</div>
+                    <select name="select" id="days">
+                        <option value="value1" selected>1 День</option>
+                        <option value="value2">2 День</option>
+                        <option value="value3">3 День</option>
+                    </select>
+                </div>
+                <div class="diagram__tabs"></div>
+                <div class="diagram__table">
+                    <div class="diagram__table__title">
+                        <div class="diagram__table__subtitle">Тикер</div>
+                        <div class="diagram__table__subtitle"></div>
+                        <div class="diagram__table__subtitle"></div>
+                        <div class="diagram__table__subtitle">Посл. цена</div>
+                        <div class="diagram__table__subtitle">Изм.</div>
+                    </div>
+                    <div class="diagram__table__row">
+                        <div class="diagram__table__row__item1">
+                            <div class="diagram__table__row__item__values">
+                                <div class="logo">
+                                    <img src="logo.png" alt="logo">
+                                </div>
+                                <div class="name">
+                                    <div class="name-full">ВТБ банк</div>
+                                    <div class="name-short">VTBR</div>
+                                </div>
+                                <div class="price">4.790 ₽</div>
+                            </div>
+                            <div class="diagram__table__row__item__changes">
+                                <div class="frame">
+                                    <div class="arrow"><img src="arrow - up.png" alt=""></div>
+                                    <div class="text">8.27%</div>
+                                </div>
+                                <div class="text">0.36 ₽</div>
+                            </div>
+                        </div>
+                        <div class="diagram__table__row__item2">
+                            <div class="diagram__table__row__item__values">
+                                <div class="logo">
+                                    <img src="no-logo.png" alt="">
+                                </div>
+                                 <div class="name">
+                                    <div class="name-full">Пао «Русгидро»</div>
+                                    <div class="name-short">HYDR</div>
+                                </div>
+                                <div class="price">0.0132 ₽</div>
+                            </div>
+                            <div class="diagram__table__row__item__changes">
+                                <div class="frame">
+                                    <div class="arrow"><img src="arrow - down.png" alt=""></div>
+                                    <div class="red-text">4.83%</div>
+                                </div>
+                                <div class="red-text">0.36 ₽</div>
+                            </div>
+                        </div>
+                        <div class="diagram__table__row__item3">
+                            <div class="diagram__table__row__item__values">
+                                <div class="logo">
+                                    <img src="logo1.png" alt="">
+                                </div>
+                                 <div class="name">
+                                    <div class="name-full">The Walt Disney Co...</div>
+                                    <div class="name-short">DIS-RM</div>
+                                </div>
+                                <div class="price">10 900 $</div>
+                            </div>
+                            <div class="diagram__table__row__item__changes">
+                                <div class="frame">
+                                    <div class="arrow"><img src="arrow - up.png" alt=""></div>
+                                    <div class="text">4.34%</div>
+                                </div>
+                                <div class="text">0.36 ₽</div>
+                            </div>
+                        </div>
+                        <div class="diagram__table__row__item4">
+                            <div class="diagram__table__row__item__values">
+                                <div class="logo">
+                                    <img src="logo2.png" alt="">
+                                </div>
+                                 <div class="name">
+                                    <div class="name-full">Газпром</div>
+                                    <div class="name-short">GAZP</div>
+                                </div>
+                                <div class="price">25.70 ₽</div>
+                            </div>
+                            <div class="diagram__table__row__item__changes">
+                                <div class="frame">
+                                    <div class="arrow"><img src="arrow - up.png" alt=""></div>
+                                    <div class="text">4.34%</div>
+                                </div>
+                                <div class="text">0.36 ₽</div>
+                            </div>
+                        </div>
+                        <div class="diagram__table__row__item5">
+                            <div class="diagram__table__row__item__values">
+                                <div class="logo">
+                                    <img src="logo1.png" alt="">
+                                </div>
+                                 <div class="name">
+                                    <div class="name-full">The Walt Disney Co...</div>
+                                    <div class="name-short">DIS-RM</div>
+                                </div>
+                                <div class="price">10 900 $</div>
+                            </div>
+                            <div class="diagram__table__row__item__changes">
+                                <div class="frame">
+                                    <div class="arrow"><img src="arrow - up.png" alt=""></div>
+                                    <div class="text">4.34%</div>
+                                </div>
+                                <div class="text">0.36 ₽</div>
+                            </div>
+                        </div>
+                        <div class="diagram__table__row__item6">
+                            <div class="diagram__table__row__item__values">
+                                <div class="logo">
+                                    <img src="logo3.png" alt="">
+                                </div>
+                                 <div class="name">
+                                    <div class="name-full">Cisco Systems, Inc.</div>
+                                    <div class="name-short">CSCO-RM</div>
+                                </div>
+                                <div class="price">25.70 ₽</div>
+                            </div>
+                            <div class="diagram__table__row__item__changes">
+                                <div class="frame">
+                                    <div class="arrow"><img src="arrow - up.png" alt=""></div>
+                                    <div class="text">4.34%</div>
+                                </div>
+                                <div class="text">0.36 ₽</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="jquery.selectric.js"></script>
+</body>
+</html>
