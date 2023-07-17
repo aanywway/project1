@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum = (a,b) => a + b;
+        let sum2 = function(a,b) {
+            return a + b;
+        }
+        alert(sum(1,2)); // 3
+        alert(sum2(1,2)); //3
+        let double = n => n * 2; // примерно тоже что и:
+        // let double = function(n) {
+        //     return n * 2
+        // }
+        alert(double(3));
+        let arr = ['Яблоко', {name: 'Джон'}, true, function() {alert('привет');}];
+        alert(arr[0])
+    </script>
+</body>
+</html>

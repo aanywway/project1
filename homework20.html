@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашняя работа №20</title>
+  </head>
+  <body>
+    <script>
+        let N = prompt("Введите число", '')
+        for(let i = 2; i <= N; i++) {
+            if(i % 2 == 0) {
+                alert(i);
+            }
+        }
+        let Num = prompt("Введите число", '')
+        for(let k = Num; k >= 1; k--) {
+            if(k % 2 !== 0) {
+                alert(k);
+            }
+        }
+        let Q = prompt("Введите число", '')
+        for(let l = 1; l < Q; l++) {
+            if(Q % l == 0) {
+                alert(l);
+            }
+        }
+        let sum = 1;
+        let mult = 1;
+        for(let a = 1; a <=10; a++) {
+            mult *= sum;
+            sum += a+1;
+            console.log("Сумма", sum);
+            console.log("Произведение", mult);
+        }
+        alert(mult);
+        var day = prompt("Введите день", '');
+        var month = prompt("Введите месяц", '');
+        var year = prompt("Введите год", '');
+        if (month < 1 || month <= 12 || year < 0 || day < 1) {
+            if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day <= 31) {
+                alert('Дата корректна');
+            }
+            else if ((month == 4 || month == 6 || month == 9 || month == 11) && day <= 30) {
+                alert('Дата корректна');
+            }
+            else if (year % 4 == 0 && month == 2 && day <= 29) {
+                alert('Дата корректна');
+            }
+            else if (month == 2 && day <= 28) {
+                alert('Дата корректна');
+            }
+            else {
+                alert('Дата некорректна');
+            }
+        }
+        else {
+            alert('Дата некорректна');
+        }
+    </script>
+  </body>
+</html>
