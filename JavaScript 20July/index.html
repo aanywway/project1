@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Многомерные массивы</title>
+  </head>
+  <body>
+    <script>
+    let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ];
+    alert(matrix[1][1]); //5
+    //Метод concat
+    const array1 = ['a', 'b', 'c'];
+    const array2 = ['d', 'e', 'f'];
+    const array3 = array1.concat(array2);
+    alert(array3); //a, b, c, d, e, f
+    //Метод reverse
+    const array4 = ['one', 'two', 'three'];
+    alert(array4); //one, two, three
+    const reversed = array4.reverse();
+    alert(reversed); //three, two, one
+    //Метод join
+    const elements = ['Fire', 'Air', 'Water'];
+    alert(elements.join()); //Fire, Air, Water
+    alert(elements.join('')); //FireAirWater
+    alert(elements.join('-')); //Fire-Air-Water
+    //Первое задание
+    const matrix1 = [1, 2, 3];
+    const matrix2 = [4, 5, 6];
+    const matrix3 = matrix1.concat(matrix2);
+    alert(matrix3);
+    //Второе задание
+    const matrix4 = [1, 2, 3];
+    const matrixreversed = matrix4.reverse();
+    alert(matrixreversed);
+    //Третье задание
+    matrix1.push(4, 5, 6);
+    alert(matrix1);
+    //Четвертое задание
+    const matrix5 = [1, 2, 3]
+    matrix5.unshift(4, 5, 6);
+    alert(matrix5);
+    //Пятое задание
+    let matrix6 = [7, 9, 3];
+    alert(matrix6[1]);
+    //Шестое задание
+    alert(matrix6[matrix6.length-1]);
+    alert(matrix6.at(-1));
+    </script>
+  </body>
+</html>
