@@ -8,7 +8,46 @@
   </head>
   <body>
       <script>
-          
+          // splice
+          let arr = ["Я", "изучаю", "JavaScript"];
+          arr.splice(1, 1); // начиная с индекса 1, удалить 1 элемент
+          alert(arr);
+          let arr1 = ["Я", "изучаю", "JavaScript", "прямо", "сейчас"];
+          // удалить 3 первых элемента и заменить их другими
+          arr1.splice(0, 3, "Давай", "танцевать");
+          alert(arr1);
+          let arr2 = ["Я", "изучаю", "JavaScript"];
+          // с индекса 2
+          // удалить 0 элементов
+          // вставить "сложный", "язык"
+          arr2.splice(2, 0, "сложный", "язык");
+          alert(arr2);
+          // slice
+          let arr3 = ["t", "e", "s", "t"];
+          alert(arr3.slice(1, 3));
+          // e, s (копирует с 1 до 3)
+          alert(arr3.slice(-2));
+          // s, t (копирует с -2 до конца)
+          let mas = [1, 2, 3, 4, 5];
+          let mas1 = mas.slice(0, 3);
+          alert(mas1);
+          let mas2 = mas.slice(3, 5);
+          alert(mas2);
+          let mas3 = [1, 2, 3, 4, 5];
+          mas3.splice(1, 2);
+          alert(mas3);
+          let mas4 = [1, 2, 3, 4, 5];
+          mas4.splice(0, 1);
+          mas4.splice(3, 1);
+          alert(mas4)
+          let mas5 = [1, 2, 3, 4, 5];
+          mas5.splice(3, 0, 'a', 'b', 'c');
+          alert(mas5);
+          let mas6 = [1, 2, 3, 4, 5];
+          mas6.splice(1, 0, 'a', 'b');
+          mas6.splice(6, 0, 'c');
+          mas6.splice(8, 0, 'e');
+          alert(mas6);
       </script>  
   </body>
 </html>
