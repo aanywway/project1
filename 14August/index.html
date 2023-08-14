@@ -88,7 +88,17 @@
         console.log(studentsDataNewNew);
         let studentsDataNewNewNew = [['Андрей', 24], ['Настя', 23, 'привет']];
         studentsDataNewNewNew[1].pop('привет');
-        console.log(studentsDataNewNewNew)
+        console.log(studentsDataNewNewNew);
+        let studentsDataa = [['Андрей', 24], ['Настя', 23, "привет"], ];
+        //проходим по элементам "внешнего" массива
+        for(let i = 0; i < studentsDataa.length; i++) {
+            //вычисляем длину "внутреннего" массива
+            let innerArrayLength = studentsDataa[i].length;
+            //проходим по элементам "внутреннего массива"
+            for(let j = 0; j < innerArrayLength; j++) {
+                console.log(studentsDataa[i][j]);
+            }
+        }
     </script>
 </body>
 </html>
