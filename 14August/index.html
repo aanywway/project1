@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>какие-то методы :c</title>
+</head>
+<body>
+    <script>
+        Array.isArray([]);
+        Array.isArray([1]);
+        Array.isArray(new Array());
+        Array.isArray({});
+        Array.isArray(null);
+        Array.isArray(undefined);
+        Array.isArray(17);
+        Array.isArray("Array");
+        //МЕТОД EVERY
+        const array1 = [1, 30, 39, 29, 10, 13];
+        const isBelow = currentValue => currentValue < 40;
+        console.log(array1.every(isBelow));
+        const array2 = [92, 18, 13, 4, 0, 99];
+        console.log(array2.every(Value => Value < 99))
+        //МЕТОД SOME
+        const array3 = [1, 2, 3, 4, 5];
+        const even = element => element % 2 === 0;
+        console.log(array3.some(even));
+        const array4 = [6, 7, 8, 9, 10];
+        console.log(array4.some(elem => elem % 2 === 0))
+        //ПЕРВОЕ ЗАДАНИЕ
+        const mas1 = [0, 2, -3, 10, 11];
+        console.log(mas1.every(masNum => masNum > 0));
+        //ВТОРОЕ ЗАДАНИЕ
+        const mas2 = [-3, -10, 2, -99, 100];
+        console.log(mas2.some(masNum1 => masNum1 < 0))
+        //МЕТОД REDUCE
+        let myAwesomeArray = [1, 2, 3, 4, 5];
+        let res = myAwesomeArray.reduce((total, value) => total * value);
+        // 1 * 2 * 3 * 4 * 5
+        console.log(res)
+        //ПЕРВОЕ ЗАДАНИЕ
+        let mas3 = [3, 7, 10, 11, 28];
+        let mas3pt1 = mas3.reduce((total, value) => total + value);
+        console.log(mas3pt1);
+        let mas4 = [1, 2, 3, 0, 4, 5, 6];
+        let isNull = false;
+        let sum = mas4.reduce((sum, item) => {
+            if(item == 0) {
+                isNull = true;
+            }
+            if (!isNull) { //isNull == false
+                return sum + item;
+            }
+            else {
+                return sum;
+            }
+        });
+        console.log(sum)
+        //МЕТОД FILL
+        const array5 = [1, 2, 3, 4];
+        console.log(array5.fill(0, 2, 4)); //[1, 2, 0, 0]
+        console.log(array5.fill(5, 1)); //[1, 5, 5, 5]
+        console.log(array5.fill(6)); //[6, 6, 6, 6]
+        let arr2 = new Array(10);
+        console.log(arr2[0]);
+        console.log(arr2.length);
+        let arr = new Array(10).fill().map((item, index) => index);
+        //ДВУМЕРНЫЙ МАССИВ
+        let items = [ [1, 2], [3, 4], [5, 6] ];
+        console.log(items[0][0]); // 1
+        console.log(items[0][1]); // 2
+        console.log(items[1][0]); // 3
+        console.log(items[1][1]); // 4
+        console.log(items[2][0]); // 5
+        console.log(items[2][1]); // 6
+        console.log(items);
+        let studentsData = [['Андрей', 24], ['Настя', 23], ];
+        studentsData.push(['Даня', 24]);
+        console.log(studentsData);
+        // Вывод: [['Андрей', 24], ['Настя', 23], ['Даня', 24] ]
+        let studentsDataNew = [['Андрей', 24], ['Настя', 23], ];
+        studentsDataNew[1].push('привет');
+        console.log(studentsDataNew);
+        // Вывод: [['Андрей', 24], ['Настя', 23, 'привет']]
+        let studentsDataNewNew = [['Андрей', 24], ['Настя', 23], ['Даня', 24] ]
+        studentsDataNewNew.pop(['Даня', 24]);
+        console.log(studentsDataNewNew);
+        let studentsDataNewNewNew = [['Андрей', 24], ['Настя', 23, 'привет']];
+        studentsDataNewNewNew[1].pop('привет');
+        console.log(studentsDataNewNewNew)
+    </script>
+</body>
+</html>
