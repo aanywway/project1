@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let mas = [11, 45, 88, 9, 0];
+        let temp = [];
+        let max = -Infinity;
+        mas.forEach(item => {
+            temp.push(String(item).split('').reduce((a,b) => parseInt(a) + parseInt(b)));
+        })
+        for(let i = 0; i < temp.length; i++) {
+            if(temp[i] >= max) {
+                max = temp[i];
+                maxInd = i;
+            }
+        }
+        console.log("Для элемента", mas[maxInd], "сумма его цифр получилась больше всего, а именно:", max);
+        let mass = [1, 7, 4, 2, -9, 8];
+        mass = mass.map((item, index) =>
+        item = index %2 !=0 ? 0: item
+        )
+        console.log(mass);
+        var str = "Мама мыла раму";
+        console.log(str.split(' ').reverse().join(' '));
+        let str1 = "Сегодня 1 был хороший 2 день";
+        let mas1 = str1.split(" ");
+        let counter = 0;
+        for(let i = 0; i < mas1.length; i++) {
+            // !isNaN(mas1[i]/1) ? counter++:''
+
+            if(!isNaN(mas1[i]/1)) {
+                counter++;
+            }
+        }
+        console.log(counter);
+        let Str = "водоворотоподобно";
+        let array = Str.split('');
+        let set = new Set (array);
+        let newStr = Array.from(set).join('');
+        // console.log(Str.length);
+        // console.log(newStr.length);
+        console.log(Str.length - newStr.length)
+        let Str1 = "Мама";
+        let Str2 = "Папа";
+        Str1.toLowerCase();
+        Str2.toLowerCase();
+        let array1 = Str1.split('').filter(item => !Str2.includes(item)).join('');
+        let array2 = Str2.split('').filter(item => !Str1.includes(item)).join('');
+        console.log(array1, array2)
+    </script>
+  </body>
+</html>
