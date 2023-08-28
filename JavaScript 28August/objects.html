@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        const catVasya = {
+            name: 'Вася',
+            age: 2,
+            color: 'рыжий',
+            weight: 3,
+            mew: function() {
+                console.log('мяу-мяу');
+            },
+            sayName() {
+                console.log('Привет, я кот ' + this.name);
+            },
+            sayAge() {
+                console.log('Мне ' + this.age + ' года');
+            },
+            sayColor() {
+                console.log('У меня ' + this.color + ' цвет шерсти');
+            },
+            sayWeight() {
+                console.log('Я вешу ' + this.weight + ' килограмма');
+            }
+        };
+        catVasya.sayName();
+        catVasya.sayAge();
+        catVasya.sayColor();
+        catVasya.sayWeight();
+        catVasya.mew();
+        let person = {
+            name: "John",
+            age: 30,
+            city: "New York",
+            phone: "123-456-7890"
+        };
+        function showPersonInfo(person) {
+            console.log("Name: " + person.name);
+            console.log("Age: " + person.age);
+            console.log("City: " + person.city);
+            console.log("Phone: " + person.phone);
+        }
+        showPersonInfo(person);
+        let newPerson = {
+            name: "John",
+            age: 30,
+            city: "New York",
+            phone: "123-456-7890",
+            showNewPersonInfo: function(newPerson) {
+            console.log("Name: " + newPerson.name);
+            console.log("Age: " + newPerson.age);
+            console.log("City: " + newPerson.city);
+            console.log("Phone: " + newPerson.phone);
+            }
+        };
+        newPerson.showNewPersonInfo(newPerson);
+        let people = [
+            { name: "John", age: 30 },
+            { name: "Bob", age: 25 },
+            { name: "Alice", age: 28}
+        ];
+        function getNames(people) {
+            let result = [];
+            for (let i = 0; i < people.length; i++) {
+                if (people[i].age > 25) {
+                    result.push(people[i].name);
+                }
+            }
+            return result;
+        }
+        console.log(getNames(people));
+        let newPeople = [
+            { name: "Robert", age: 13 },
+            { name: "Chris", age: 28 },
+            { name: "Dwayne", age: 37 },
+            { name: "Ryan", age: 22 }
+        ];
+        console.log(newPeople.length);
+        function User(name) {
+            this.name = name;
+            this.sayHi = function() {
+                alert( "Меня зовут: " + this.name);
+            };
+        }
+        let john = new User("John");
+        john.sayHi(); // Меня зовут: John
+        let anya = new User("Anya");
+        anya.sayHi(); // Меня зовут: Anya
+        let masha = new User("Masha");
+        masha.sayHi(); // Меня зовут: Masha
+    </script>
+  </body>
+</html>
