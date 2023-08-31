@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+      <script>
+          let book = {
+              title: "Rich Dad Poor Dad",
+              author: "Robert T. Kiyosaki",
+              pages: 336,
+              showBookInfo: function(book) {
+                  console.log("Title: " + book.title);
+                  console.log("Author: " + book.author);
+                  console.log("Number of pages: " + book.pages);
+              }
+          };
+          book.showBookInfo(book);
+          let people = [
+              {name: "John", age: 30},
+              {name: "Bob", age: 21},
+              {name: "Anna", age: 19}
+          ];
+          function getName(people) {
+              let result = {};
+              for (let i = 0; i < people.length; i++) {
+                  if (people[i].name == "Bob") {
+                      result = Object.assign({}, people[i]);
+                  }
+              }
+              return result;
+          }
+          console.log(getName(people));
+          let newPeople = [
+              {name: "John", age: 30},
+              {name: "Bob", age: 21},
+              {name: "Anna", age: 19}
+          ];
+          function deleteAnna(newPeople) {
+              for (let i = 0; i < people.length; i++) {
+                  if (people[i].name == "Anna") {
+                      newPeople.splice(i, 1);
+                  }
+              }
+              return newPeople;
+          }
+          console.log(deleteAnna(newPeople))
+          let MoreNewPeople = [
+              {name: "John", age: 30},
+              {name: "Bob", age: 21},
+              {name: "Anna", age: 19}
+          ]
+          let p = MoreNewPeople.filter(person => person.name !== "Anna");
+          console.log(p)
+          let AgainMoreNewPeople = [
+              {name: "John", age: 30},
+              {name: "Bob", age: 25},
+              {name: "Anna", age: 28}
+          ]
+          console.log(AgainMoreNewPeople.sort((a, b) => a.age - b.age));
+          var litmir = [
+              {author: 'Хэленка', title: 'Улетела сказка'},
+              {author: 'Коул Кресли', title: 'Восстание аркан'},
+              {author: 'Райчел Мид', title: 'Золотая лилия'}
+          ];
+          function propertyValue(array, key) {
+              for (let i = 0; i < array.length; i++) {
+                  let obj = array[i];
+                  for (let k in obj) {
+                      if (k == key) {
+                          console.log(obj[k]);
+                      }
+                  }
+              }
+          }
+      </script>
+  </body>
+</html>
