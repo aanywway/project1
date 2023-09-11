@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+      <script>
+          let array = [1, 2, 3] // если написать в консоли "array", а потом тыкнуть на "prototype", то мы кое-что увидим
+          const parent = {
+              name: 'Stacey',
+              age: 35,
+              heritage: 'Irish'
+          }
+          const child = Object.create(parent);
+          console.log(child);
+          console.log(child.name);
+          child.name = 'Ryan';
+          child.age = 7;
+          console.log(child.name); // Ryan
+          console.log(child.age); //7
+          console.log(child.heritage); //Irish
+          const animal = {
+              name: 'Вася',
+              color: 'рыжий',
+              class: 'pets',
+              showInfo: function() {
+              console.log('Привет, меня зовут ' + this.name);
+              console.log('У меня ' + this.color + ' цвет шерсти');
+              console.log('Я отношусь к классу ' + this.class);
+              }
+          };
+          const cat = Object.create(animal);
+          const dog = Object.create(animal);
+          cat.name = 'Барсик';
+          cat.color = 'серый';
+          dog.name = 'Шарик';
+          dog.color = 'чёрный';
+          cat.showInfo();
+          dog.showInfo();
+      </script>  
+  </body>
+</html>
