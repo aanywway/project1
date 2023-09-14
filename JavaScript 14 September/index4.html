@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="main page">
+    <div class="contents">
+        <ul class="book">
+            <li class="chapter">Глава 1</li>
+            <li class="chapter">Глава 2</li>
+        </ul>
+    </div>
+    <script>
+        let chapter = document.querySelector('.chapter'); //LI
+        console.log(chapter.closest('.book')); //UL
+        console.log(chapter.closest('.contents')); //DIV
+        console.log(document.body.className);
+        document.body.classList.add('article');
+        console.log(document.body.className);
+        document.body.classList.remove('page');
+        console.log(document.body.classList.contains('main'));
+    </script>
+</body>
+</html>
