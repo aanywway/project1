@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теория</title>
+</head>
+<body>
+    <!-- Объект события -->
+    <input type="button" value="Нажми меня" id="elem">
+    <script>
+    //Объект события
+        elem.onclick = function(event) {
+            console.log(event.type + " на " + event.currentTarget);
+            console.log("Координаты: " + event.clientX + ":" + event.clientY);
+            console.log(event);
+        };
+    </script>
+</body>
+</html>

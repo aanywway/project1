@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания (практика)</title>
+</head>
+<body>
+    <button onclick="alert(this.innerHTML)">Нажми на меня</button>
+    <button onclick="this.hidden = 'true'">При нажатии кнопка будет скрываться</button>
+    <button id="button1">Первая кнопка</button>
+    <button id="button2">Вторая кнопка</button>
+    <button id="button3">Опять будет скрывать элемент при клике</button>
+    <div id="block">При наведении цвет меняется на красный</div>
+    <button id="see">Показать подробности</button>
+    <p id="text">Какие-то подробности, которые то показыватся, то скрываются (магия)</p>
+    <button id="dontsee">Скрыть подробности</button>
+    <button id="button4">Нажми два раза</button>
+    <input id="focusinput" type="text">
+    <script>
+        button1.onclick = function() {
+            alert('Нажата первая кнопка');
+        }
+        button2.onclick = function() {
+            alert('Нажата вторая кнопка')
+        }
+        button3.addEventListener('click', () => button3.style.display = 'none');
+        block.addEventListener('mouseover', () => block.style.backgroundColor = "red");
+        block.addEventListener('mouseout', () => block.style.backgroundColor = "white");
+        text.style.display = "none";
+        see.addEventListener('click', () => text.style.display = "inline");
+        dontsee.addEventListener('click', () => text.style.display = "none");
+        // function smth() {
+        //     console.log('Кнопка была нажата 2 раза');
+        // }
+        // button4.addEventListener('dblclick', smth);
+        button4.addEventListener('dblclick', () => console.log('Кнопка была нажата 2 раза'))
+        focusinput.addEventListener('focus', () => focusinput.style.backgroundColor = "yellow");
+        focusinput.addEventListener('focusout', () => focusinput.style.backgroundColor = "white");
+        let button = document.querySelectorAll('button');
+        button.forEach(button => {
+            button.addEventListener('click', () => alert("Кнопка нажата!"));
+        });
+    </script>
+</body>
+</html>
