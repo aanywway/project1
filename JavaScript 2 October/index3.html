@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .highlight {
+            background-color: red;
+        }
+    </style>
+    <ul id="ul">
+        <li>Первый</li>
+        <li>Второй</li>
+        <li>Третий</li>
+        <li>Четвёртый</li>
+        <li>Пятый</li>
+        <li>Шестой</li>
+    </ul>
+    <script>
+        let SelectedLi;
+        ul.onclick = function (event) {
+            let target = event.target;
+            if (target.tagName != 'LI') return;
+            if (event.ctrlKey || event.metaKey){
+                highlight2(target);
+            }
+            highlight(target);
+        };
+        function highlight(li) {
+            if(SelectedLi) {
+                SelectedLi.classList.remove('highlight');
+            }
+            SelectedLi = li;
+            SelectedLi.classList.add('highlight');
+        };
+        function highlight2(li) {
+            if(event.ctrlKey || event.metaKey) {
+                SelectedLi.classList.add('highlight');
+            }
+            SelectedLi = li;
+            SelectedLi.classList.add('highlight');
+        };
+    </script>
+</body>
+</html>

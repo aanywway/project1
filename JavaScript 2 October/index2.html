@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Нажми на меня и я стану больше!</button>
+    <script>
+        let button = document.querySelector('button');
+        let size = 20;
+        button.style.fontSize = `${size}px`;
+        button.addEventListener('click', () => {
+            size *= 2;
+            button.style.fontSize = `${size}px`;
+        });
+    </script>
+</body>
+</html>
