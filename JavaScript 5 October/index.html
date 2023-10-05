@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    </div>
+    <script>
+        // создаём h2
+        let div = document.querySelector("div");
+        let newH2 = document.createElement("h2");
+        newH2.innerHTML = "TO DO";
+        div.append(newH2);
+        // создаём ul
+        let newUl = document.createElement("ul");
+        div.append(newUl);
+        // создаём li
+        let firstLi = document.createElement("li");
+        firstLi.innerHTML = "Swimming pool";
+        newUl.append(firstLi);
+        let secondLi = document.createElement("li");
+        secondLi.innerHTML = "Yoga";
+        newUl.append(secondLi);
+        let thirdLi = document.createElement("li");
+        thirdLi.innerHTML = "Sauna";
+        newUl.append(thirdLi);
+        let fourthLi = document.createElement("li");
+        fourthLi.innerHTML = "Volleyball";
+        newUl.append(fourthLi);
+        // создаём h3
+        let newH3 = document.createElement("h3");
+        newH3.innerHTML = "Please, enter item";
+        div.append(newH3);
+        // создаём новый div внутри основного div'а
+        let newDiv = document.createElement("div");
+        div.append(newDiv);
+        // создаём input
+        let newInput = document.createElement("input");
+        newDiv.append(newInput);
+        // создаём button 
+        let newButton = document.createElement("button");
+        newButton.innerHTML = "add";
+        newDiv.append(newButton);
+        // делаем так, чтобы значение добавлялось
+        function adding() {
+            let inputValue = newInput.value; // создаём новую переменную и туда добавляем значение input'a
+            console.log(inputValue);
+            let brandNewLi = document.createElement("li"); // создаём новый пустой li
+            brandNewLi.innerHTML = inputValue; // в только что созданный li передаём значение из input'a
+            newUl.append(brandNewLi); // добавляем новый li, но уже со значением
+            newInput.value = "";
+            brandNewLi.style.background = "#98FF98";
+            brandNewLi.style.display = "flex";
+            brandNewLi.style.alignItems = "center";
+            brandNewLi.style.justifyContent = "center";
+            brandNewLi.style.height = "35px";
+        }
+        newButton.addEventListener('click', adding);
+        newInput.addEventListener('keydown', function(event) {
+            if(event.code == 'Enter') {
+                let inputValue = newInput.value; // создаём новую переменную и туда добавляем значение input'a
+                console.log(inputValue);
+                let brandNewLi = document.createElement("li"); // создаём новый пустой li
+                brandNewLi.innerHTML = inputValue; // в только что созданный li передаём значение из input'a
+                newUl.append(brandNewLi); // добавляем новый li, но уже со значением
+                newInput.value = "";
+                brandNewLi.style.background = "#98FF98";
+                brandNewLi.style.display = "flex";
+                brandNewLi.style.alignItems = "center";
+                brandNewLi.style.justifyContent = "center";
+                brandNewLi.style.height = "35px";
+            }
+        })
+        // приступаем к свойстам
+        div.style.margin = "0 auto";
+        div.style.textAlign = "center";
+        div.style.width = "300px";
+        newH2.style.color = "white";
+        newH2.style.background = "#ff8051";
+        newH2.style.marginBottom = "0px";
+        newH2.style.height = "45px";
+        newH2.style.display = "flex";
+        newH2.style.alignItems = "center";
+        newH2.style.justifyContent = "center";
+        newUl.style.listStyleType = "none";
+        newUl.style.color = "#993333";
+        newUl.style.marginTop = "0px";
+        newUl.style.paddingLeft = "0px";
+        firstLi.style.background = "cornsilk";
+        firstLi.style.height = "35px";
+        firstLi.style.display = "flex";
+        firstLi.style.alignItems = "center";
+        firstLi.style.justifyContent = "center";
+        secondLi.style.background = "antiquewhite";
+        secondLi.style.height = "35px";
+        secondLi.style.display = "flex";
+        secondLi.style.alignItems = "center";
+        secondLi.style.justifyContent = "center";
+        thirdLi.style.background = "beige";
+        thirdLi.style.height = "35px";
+        thirdLi.style.display = "flex";
+        thirdLi.style.alignItems = "center";
+        thirdLi.style.justifyContent = "center";
+        fourthLi.style.background = "blanchedalmond";
+        fourthLi.style.height = "35px";
+        fourthLi.style.display = "flex";
+        fourthLi.style.alignItems = "center";
+        fourthLi.style.justifyContent = "center";
+        newH3.style.color = "darkgoldenrod";
+        newH3.style.fontSize = "14px";
+        newH3.style.marginTop = "30px";
+        newInput.style.width = "84%";
+    </script>
+</body>
+</html>
