@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первое практическое задание</title>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: green;
+        }
+    </style>
+    <div></div>
+    <script>
+        let div = document.querySelector('div');
+        let size = 100;
+        div.style.width = `${size}px`;
+        div.style.height = `${size}px`;
+        div.addEventListener('mouseover', () => div.style.backgroundColor = 'blue');
+        div.addEventListener('mouseout', () => div.style.backgroundColor = 'green');
+        div.addEventListener('contextmenu', () => {
+            size *= 2;
+            div.style.width = `${size}px`;
+            div.style.height = `${size}px`;
+        });
+        div.addEventListener('click', () => {
+            size /= 2;
+            div.style.width = `${size}px`;
+            div.style.height = `${size}px`;
+        });
+    </script>
+</body>
+</html>

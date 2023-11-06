@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Второе практическое задание</title>
+</head>
+<body>
+    <style>
+        .bgColor {
+            background-color: red;
+        }
+    </style>
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ducimus.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut.</li>
+    </ul>
+    <script>
+        let ul = document.querySelector("ul");
+        ul.addEventListener('click', function(event) {
+        // у стрелочной функции нет своего "this"
+
+            if(event.target.tagName == 'LI') {
+                let liRed = this.querySelector('.bgColor');
+                if(liRed) {
+                    liRed.classList.remove('bgColor');
+                }
+                event.target.classList.add('bgColor');
+            } 
+        });
+        ul.addEventListener('dblclick', (event) => {
+            if(event.target.tagName == 'LI') {
+                let li = document.createElement('li');
+                li.innerHTML = event.target.innerHTML;
+                ul.append(li);
+            }
+        })
+        ul.addEventListener('mouseover', (event) => {
+            if(event.target.tagName == 'LI') {
+            event.target.style.fontWeight = 'bold';
+        }});
+        ul.addEventListener('mouseout', (event) => {
+            if(event.target.tagName == 'LI') {
+            event.target.style.fontWeight = 'normal';
+        }});
+    </script>
+</body>
+</html>

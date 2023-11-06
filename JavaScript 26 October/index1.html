@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let str = 'Больше о JavaScript на https://javascript.info';
+    let regexp = /javascript/ig;
+    let result;
+    while (result = regexp.exec(str)) {
+        alert(`Найдено ${result[0]} на позиции ${result.index}`);
+    }
+    // Найдено JavaScript на позиции 9, затем
+    // Найдено JavaScript на позиции 31
+    let str1 = 'let varName = "value"';
+    let regexp1 = /\w+/g; // без флага g свойство lastIndex игнорируется
+    regexp1.lastIndex = 4;
+    let word = regexp1.exec(str1);
+    alert(word); // varName
+    let str2 = "Я люблю JavaScript!";
+    let regexp2 = /Java.+/;
+    alert(str2.search(regexp2)); // 8
+    let str3 = "John Smith"; // поменять местами имя и фамилию
+    alert(str3.replace(/(\w+) (\w+)/i, '$2, $1')); // Smith, John
+    </script>
+</body>
+</html>

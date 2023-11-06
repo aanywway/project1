@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            width: 350px;
+            margin-bottom: 25px;
+        }
+    </style>
+<form id="form">
+    <div>
+        <label for="settlement">Введите название населённого пункта:</label>
+        <input type="text" id="settlement" placeholder="Витебск" required>
+    </div>
+    <div>
+        <label for="neighborhood">Выберите район:</label>
+        <select name="neighborhood" id="neighborhood" required>
+            <option value="Витебский район">Витебский район</option>
+            <option value="Минский район">Минский район</option>
+            <option value="Гомельский район">Гомельский район</option>
+        </select>
+    </div>
+    <div class="type">
+        <input type="radio" name="typeTown" id="typeTown-1" required>
+        <label for="typeTown-1">Город</label>
+        <input type="radio" name="typeTown" id="typeTown-2">
+        <label for="typeTown-2">Посёлок городского типа</label>
+    </div>
+    <div>
+        <button id="add-button" type="submit">Добавить</button>
+        <button id="save-button">Сохранить</button>
+    </div>
+</form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Раойн</th>
+                <th>Тип</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Витебск</td>
+                <td>Витебский район</td>
+                <td>Город</td>
+                <td>
+                    <button class="edit-button">Редактировать</button>
+                    <button class="delete-button">Удалить</button>
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+    <script>
+        let inputSettlement = document.getElementById('settlement');
+        let selectNeighborhood = document.getElementById('neighborhood');
+        let addButton = document.getElementById('add-button');
+        let editButton = document.getElementById('edit-button');
+        let deleteButton = document.getElementById('delete-button');
+        let type = document.querySelectorAll('.type input')
+        console.log(type)
+        let tbody = document.querySelector('tbody');
+        let form = document.getElementById('form');
+        function adding(e) {
+            e.preventDefault();
+            console.log("cc")
+            let newTr = document.createElement('tr'); // создаём строку таблицы
+            let firstTd = document.createElement('td'); // создаём первую ячейку таблицы
+            firstTd.innerHTML = inputSettlement.value; // передали значение из input'a в первую ячейку
+            let secondTd = document.createElement('td'); // создаём вторую ячейку таблицы
+            secondTd.innerHTML = selectNeighborhood.value; // передали значение из второго input'a во вторую ячейку
+            let thirdTd = document.createElement('td'); // создаём третью ячейку таблицы
+            function checked() {
+                var typeResult = document.querySelectorAll('.type input').checked;
+                thirdTd.innerHTML = typeResult;
+            }
+            tbody.append(newTr);
+            newTr.append(firstTd);
+            newTr.append(secondTd);
+            newTr.append(thirdTd)
+        }
+        form.addEventListener('submit', adding)
+    </script>
+</body>
+</html>
