@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Третье задание</title>
+</head>
+<body>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .container > div {
+            border: 1px solid black;
+            margin: 30px;
+            height: 150px;
+            width: 150px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <div class="container">
+        <div style="background-color: #fdf8da"></div>
+        <div style="background-color: #ffe6f1"></div>
+        <div style="background-color: #ffad8d"></div>
+        <div style="background-color: #c1def3"></div>
+        <div style="background-color: #c5bbe0"></div>
+        <div style="background-color: #f0f1f5"></div>
+        <div style="background-color: #d2eddc"></div>
+        <div style="background-color: #b3f9ef"></div>
+        <div style="background-color: #fcdfd7"></div>
+        <div style="background-color: #f3add1"></div>
+    </div>
+    <script>
+        let div = document.querySelectorAll('div div');
+            for(let i=0; i<div.length; i++) {
+                div[i].addEventListener('mouseover', function(event) {
+                  event.target.style.opacity = '0.5';
+                  div[i].innerHTML = i;
+                })
+            };
+            for(let i=0; i<div.length; i++) {
+                div[i].addEventListener('mouseout', function(event) {
+                    event.target.style.opacity = '1';
+                    div[i].innerHTML = '';
+                })
+            };
+    </script>
+</body>
+</html>

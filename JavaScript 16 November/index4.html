@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пятое задание</title>
+</head>
+<body>
+    <div class="numbers">
+      <input type="text" class="first">
+      <input type="text" class="second">
+    </div>
+    <div class="radiobuttons">
+        <input type="radio" id="addition" name="elem">
+        <label for="addition">+</label>
+        <input type="radio" id="subtraction" name="elem">
+        <label for="subtraction">-</label>
+        <input type="radio" id="multiplication" name="elem">
+        <label for="multiplication">*</label>
+        <input type="radio" id="division" name="elem">
+        <label for="division">/</label>
+    </div>
+    <script>
+        let firstInput = document.getElementsByClassName('first');
+        firsrValue = firstInput.value;
+        let secondInput = document.getElementsByClassName('second');
+        secondValue = secondInput.value;
+        let additionButton = document.getElementsById('addition');
+        let subtractionButton = document.getElementsById('subtraction');
+        let multiplicationButton = document.getElementsById('multiplication');
+        let divisionButton = document.getElementsById('division');
+        additionButton.additionButton('click', function() {
+            if (button.checked) {
+                alert(firsrValue + secondValue);
+            }
+        })
+    </script>
+</body>
+</html>
