@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пятое задание</title>
+  </head>
+  <body>
+      <style>
+          #result {
+              border: 1px solid black;
+              height: 50px;
+              font-size: 35px;
+          }
+          #keyboard {
+              display: flex;
+              flex-wrap: wrap;
+              margin-top: 150px;
+          }
+          #keyboard > div {
+              width: 50px;
+              height: 50px;
+              border: 1px solid black;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 25px;
+              flex: 1 1 auto;
+          }
+      </style>
+    <div id="result"></div>
+    <div id="keyboard">
+        <div>А</div>
+        <div>Б</div>
+        <div>В</div>
+        <div>Г</div>
+        <div>Д</div>
+        <div>Е</div>
+        <div>Ё</div>
+        <div>Ж</div>
+        <div>З</div>
+        <div>И</div>
+        <div>Й</div>
+        <div>К</div>
+        <div>Л</div>
+        <div>М</div>
+        <div>Н</div>
+        <div>О</div>
+        <div>П</div>
+        <div>Р</div>
+        <div>С</div>
+        <div>Т</div>
+        <div>У</div>
+        <div>Ф</div>
+        <div>Х</div>
+        <div>Ц</div>
+        <div>Ч</div>
+        <div>Ш</div>
+        <div>Щ</div>
+        <div>Ъ</div>
+        <div>Ы</div>
+        <div>Ь</div>
+        <div>Э</div>
+        <div>Ю</div>
+        <div>Я</div>
+    </div>
+  </body>
+  <script>
+      let result = document.getElementById('result');
+      let keyboard = document.getElementById('keyboard');
+      keyboard.addEventListener('click', function(event) {
+          console.log(event.target);
+          if(event.target != event.currentTarget){
+            result.innerText = event.target.innerText
+          }
+    
+      })
+  </script>
+</html>

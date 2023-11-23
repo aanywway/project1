@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первое задание</title>
+  </head>
+  <body>
+      <style>
+          div {
+              height: 150px;
+              width: 150px;
+              border: 1px solid black;
+              margin-top: 20px;
+          }
+      </style>
+      <select name="colorSelect" id="colorSelect">
+          <option selected>Выберите цвет:</option>
+          <option value="red" class="red">Красный</option>
+          <option value="blue" class="blue">Синий</option>
+          <option value="yellow" class="yellow">Жёлтый</option>
+          <option value="green" class="green">Зелёный</option>
+      </select>
+      <div></div>
+  </body>
+  <script>
+      let select = document.getElementById('colorSelect');
+      select.childNodes[3].style.backgroundColor = 'red';
+      select.childNodes[5].style.backgroundColor = 'blue';
+      select.childNodes[7].style.backgroundColor = 'yellow';
+      select.childNodes[9].style.backgroundColor = 'green';
+      let block = document.querySelector('div');
+      select.addEventListener('change', () => {
+        //   select.style.backgroundColor = select.value;
+          block.style.backgroundColor = select.value;
+      })
+  </script>
+</html>
