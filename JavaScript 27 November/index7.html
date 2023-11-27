@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деструктуризация</title>
+  </head>
+  <body>
+      <script>
+          let options = {
+              title: "Menu",
+              height: 200,
+              width: 100
+          };
+          // title = свойство с именем title
+          // rest = объект с остальными свойствами
+          let {title, ...rest} = options;
+
+          // сейчас title = "Menu", rest = {height: 200, width: 100}
+          alert(rest.height); // 200
+          alert(rest.width); // 100
+      </script>
+  </body>
+</html>
