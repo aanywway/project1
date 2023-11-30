@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическое задание #6</title>
+  </head>
+  <body>
+    <script>
+        let n = 46;
+        let mas = [];
+        function Number(){
+            for(i = 1; i < n; i++) {
+                if(i % 15 === 0){
+                   mas.push('fizzbuzz');
+                }
+                else if(i % 3 === 0) {
+                    mas.push('fizz');
+                } 
+                else if(i % 5 === 0) {
+                    mas.push('buzz');
+                }
+                else {
+                    mas.push(i)
+                }
+            };
+            return mas
+        };
+        console.log(Number())
+        // второй вариант
+        function output(n) {
+        let arr = Array(n).fill().map((item, index) => index+1);
+        let newArr = arr.map(item => (item%15===0)? "fizzbuzz" : item%3===0? "fizz" : item%5===0? "buzz" : item);
+        console.log(newArr);
+        }
+        output(30);
+    </script>
+  </body>
+</html>
